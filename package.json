@@ -1,0 +1,15 @@
+{
+  "name": "shopify-csv-fashioner-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eric Patrick",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.12.10",
+    "gulp": "^3.9.1"
+  }
+}
