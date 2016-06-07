@@ -6,5 +6,5 @@ gulp.task('watch', function() {
     server: "./"
   });
 
-  gulp.watch("*.html").on("change", browserSync.reload);
+  gulp.watch("app.js").on("change", browserSync.reload);
 });

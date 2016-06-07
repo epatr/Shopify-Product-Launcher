@@ -80,3 +80,73 @@ var Collection = function(title, collection, vendor, sku, aws) {
   return products;
 
 };
+
+
+
+//  Results
+
+var Products = function() {
+  var collections = [
+  {
+    "name": "Team RWB Black",
+    "vendor": "Team RWB",
+    "sku": 201600000000350,
+    "s3": "https://s3.amazonaws.com/dev-ukyrgf/shopify/team-rwb/rwb-black/"
+  },
+  {
+    "name": "Team RWB Lt. OD Green",
+    "vendor": "Team RWB",
+    "sku": 201600000000360,
+    "s3": "https://s3.amazonaws.com/dev-ukyrgf/shopify/team-rwb/rwb-lt-od-green/"
+  },
+  {
+    "name": "Team RWB White Tag",
+    "vendor": "Team RWB",
+    "sku": 201600000000370,
+    "s3": "https://s3.amazonaws.com/dev-ukyrgf/shopify/team-rwb/rwb-white-tag/"
+  },
+  {
+    "name": "Team RWB Red Tag",
+    "vendor": "Team RWB",
+    "sku": 201600000000380,
+    "s3": "https://s3.amazonaws.com/dev-ukyrgf/shopify/team-rwb/rwb-red-tag/"
+  }];
+
+  var csv = [];
+
+  for (c = 0; c < collections.length; c++) {
+    csv.push(Collection(collections[c].name, collections[c].vendor, collections[c].vendor, collections[c].sku, collections[c].s3));
+  }
+
+  return csv;
+};
+
+
+// Create all of our product objects
+var products = Products();
+
+// Get the textarea element from index.html
+var textArea = document.getElementById('output');
+
+// var header = "Handle,Title,Body (HTML),Vendor,Type,Tags,Published,Option1 Name,Option1 Value,Option2 Name,Option2 Value,Option3 Name,Option3 Value,Variant SKU,Variant Grams,Variant Inventory Tracker,Variant Inventory Qty,Variant Inventory Policy,Variant Fulfillment Service,Variant Price,Variant Compare At Price,Variant Requires Shipping,Variant Taxable,Variant Barcode,Image Src,Image Alt Text,Gift Card,Google Shopping / MPN,Google Shopping / Age Group,Google Shopping / Gender,Google Shopping / Google Product Category,SEO Title,SEO Description,Google Shopping / AdWords Grouping,Google Shopping / AdWords Labels,Google Shopping / Condition,Google Shopping / Custom Product,Google Shopping / Custom Label 0,Google Shopping / Custom Label 1,Google Shopping / Custom Label 2,Google Shopping / Custom Label 3,Google Shopping / Custom Label 4,Variant Image,Variant Weight Unit\n";
+
+for (v = 0; v < products.length; v++) {
+  for (a = 0; a < products[v].length; a++) {
+    console.log(products[v][a].title);
+
+    var details = products[v][a].slug + "," +
+                  products[v][a].productName + ",\"" +
+                  products[v][a].description + "\"" +
+                  products[v][a].vendor + "," +
+                  products[v][a].collection + "," +
+                  products[v][a].tags + ",FALSE,Title,Default Title,,,,,"  +
+                  products[v][a].sku + ",0,,1,deny,manual," + 
+                  products[v][a].price + ",,TRUE,TRUE,,,,FALSE,,,,,,,,,,,,,,,,,lb\n";
+    var images =  products[v][a].slug + ",,,,,,,,,,,,,,,,,,,,,,,," +
+                  products[v][a].img + ",,,,,,,,,,,,,,,,,,,\n";
+
+    var newText = document.createTextNode(details + images);
+    textArea.appendChild(newText);
+  }
+}
+
