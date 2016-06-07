@@ -132,7 +132,6 @@ var textArea = document.getElementById('output');
 
 for (v = 0; v < products.length; v++) {
   for (a = 0; a < products[v].length; a++) {
-    console.log(products[v][a].title);
 
     var details = products[v][a].slug + "," +
                   products[v][a].productName + ",\"" +
