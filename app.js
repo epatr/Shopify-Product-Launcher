@@ -1,4 +1,16 @@
 
+// Utility Functions
+
+function convertURL(text) {
+  return text
+  .toLowerCase()
+  .replace(/[^\w ]+/g,'')
+  .replace(/ +/g,'-');
+}
+
+
+// Objects
+
 var Collection = function(title, collection, vendor, sku, aws) {
 
   // First, set up the individual product details
@@ -57,24 +69,14 @@ var Collection = function(title, collection, vendor, sku, aws) {
   // Now that we've got the products set up, you can apply common rules for the rest
   for (i = 0; i < products.length; i++){
     products[i].productName = products[i].title + " - " + title;
+    products[i].collection = collection;
+    products[i].vendor = vendor;
+    products[i].sku = sku;
     products[i].slug = convertURL(products[i].productName);
+    products[i].img = aws + products[i].img + ".jpg";
+    sku++;
   }
 
+  return products;
+
 };
-
-
-var convertURL = function(text) {
-  return text.toLowerCase().replace(/ /g,'-').replace(/[^\w-]+/g,'');
-};
-
-var getSKU = function(s) {
-  var sku = s.value;
-};
-
-function createCollection (title) {
-
-}
-
-
-var userSKU = document.getElementById('sku');
-userSKU.onblur = getSKU(userSKU);
