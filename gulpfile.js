@@ -7,4 +7,5 @@ gulp.task('watch', function() {
   });
 
   gulp.watch("app.js").on("change", browserSync.reload);
+  gulp.watch("*.html").on("change", browserSync.reload);
 });
