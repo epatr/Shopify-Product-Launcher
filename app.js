@@ -152,9 +152,9 @@ for (v = 0; v < products.length; v++) {
     // newImg.appendChild(newSrc);
     // document.getElementById('imageList').appendChild(newImg);
     
-    // var imageRow = document.getElementById('imageRow');
-    // var imageRowContent = imageRow.innerHTML;
-    // imageRow.innerHTML = imageRowContent + "<img src=" + products[v][a].img + ">";
+    var imageRow = document.getElementById('imageRow');
+    var imageRowContent = imageRow.innerHTML;
+    imageRow.innerHTML = imageRowContent + "<img src=" + products[v][a].img + ">";
   }
 }
 

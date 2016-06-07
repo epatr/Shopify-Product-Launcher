@@ -11,3 +11,8 @@ with a new logo.
 
 Simply edit the `products.json` JSON file with your line of products. After
 that, fire up `index.html` in your browser and follow the steps. 
+
+### Development
+
+This is still in early development stage. Currently using static data 
+tuned to deploy products for https://www.survivalstraps.com. 
