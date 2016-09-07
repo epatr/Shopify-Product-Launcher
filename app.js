@@ -11,8 +11,7 @@ function convertURL(text) {
 
 // Objects
 
-var Collection = function(title, collection, vendor, sku, aws) {
-
+var Collection = function(title, collection, vendor, sku, aws, tagline) {
   // First, set up the individual product details
   var products = 
   [ {
@@ -20,13 +19,13 @@ var Collection = function(title, collection, vendor, sku, aws) {
       "price": "29.99",
       "tags": "paracord, regular",
       "img": "regular",
-      "description": "<h4>Product Information</h4><div><ul><li>The Regular Survival Bracelet&trade; is expedition ready, super stylish and the size preferred by most men.</li><li>Contains up to 15' of super strong, AUTHENTIC, 550 test military spec paracord. This is not the same paracord you see sold in most stores. This is the same cordage used to rig military parachutes. It is the real deal.</li><li>In an emergency, unravel the bracelet to deploy the paracord for your use. Make a tourniquet. Tie down a piece of equipment. Use it in however you need it.</li><li>If you use it in an emergency, we'll replace it for free in exchange for your story and the rights to publish it. All you pay is shipping.</li><li>The stainless closure is a load bearing marine grade stainless steel shackle that adjusts on your wrist and is guaranteed to never rust or break.</li><li>The nylon 6-6 closure contains no metal and is made of nylon. It is super tough, black and stealth. It also adjusts on your wrist.</li><li>Logo - If one of our logo products is chosen, the logos themselves are as tough as the rest of the bracelet. They will not scratch, rust, fade or show fingerprints.</li><li>Logo tag - The dog tag will match the closure chosen. If a stainless closure is chosen, the logo dog tag will be stainless. If a nylon 6-6 closure is chosen, the dog tag will be black nylon 6-6.</li><li>A break-away safety feature is included with every bracelet. If your bracelet gets hung up on something, it will break away from your wrist.</li><li>All our products are completely waterproof. They will not fade, mildew or rot.</li><li>Hand wash with warm water and soap or detergent.</li><li>Made in America!</li></ul></div><div class=gt-accordion><h4>Closure Types</h4><div><img src=https://s3.amazonaws.com/sstrapfiles/staticresources/closures/full.jpg></div><h4>Get the Perfect Size</h4><div><p>Here at Survival Straps&trade; we custom build each piece of gear based on your exact wrist measurement. We want the size of your wrist, not the length you would like the bracelet.We ask that you follow these 3 steps closely:<ol><li>Take a tape measure, string, or scotch tape and wrap it around your wrist to where the two ends touch and there isn't any slack. Keep in mind this doesn't need to be so tight that it cuts off your circulation, but merely a true wrist size without slack.</li><li>Mark this exact length on your string and use a ruler to determine your true wrist size. Order this exact wrist size when checking out, and you are good to go!</li></ol></p><h6>Side Notes</h6><p>If you are in-between sizes, round down to the nearest size. Please remember not to compensate for slack as we do that here in-house based on your true size. Lastly, if you have any questions for our team please shoot us an email at <a href=mailto:customerservice@survivalstraps.com>customerservice@survivalstraps.com</a> or give us a ring at 1-800-971-3360 and we will gladly walk through the steps with you.</p><img width=529 height=487 src=https://s3.amazonaws.com/sstrapfiles/staticresources/sizing_chart.jpg></div></div>"
+      "description": "<h4>Product Information</h4><div><ul><li>The " + title + " Survival Bracelet&trade; " + tagline + ". It is expedition ready, super stylish and the size preferred by most men.</li><li>Contains up to 15' of super strong, AUTHENTIC, 550 test military spec paracord. This is not the same paracord you see sold in most stores. This is the same cordage used to rig military parachutes. It is the real deal.</li><li>In an emergency, unravel the bracelet to deploy the paracord for your use. Make a tourniquet. Tie down a piece of equipment. Use it in however you need it.</li><li>If you use it in an emergency, we'll replace it for free in exchange for your story and the rights to publish it. All you pay is shipping.</li><li>The stainless closure is a load bearing marine grade stainless steel shackle that adjusts on your wrist and is guaranteed to never rust or break.</li><li>The nylon 6-6 closure contains no metal and is made of nylon. It is super tough, black and stealth. It also adjusts on your wrist.</li><li>Logo - If one of our logo products is chosen, the logos themselves are as tough as the rest of the bracelet. They will not scratch, rust, fade or show fingerprints.</li><li>Logo tag - The dog tag will match the closure chosen. If a stainless closure is chosen, the logo dog tag will be stainless. If a nylon 6-6 closure is chosen, the dog tag will be black nylon 6-6.</li><li>A break-away safety feature is included with every bracelet. If your bracelet gets hung up on something, it will break away from your wrist.</li><li>All our products are completely waterproof. They will not fade, mildew or rot.</li><li>Hand wash with warm water and soap or detergent.</li><li>Made in America!</li></ul></div><div class=gt-accordion><h4>Closure Types</h4><div><img src=https://s3.amazonaws.com/sstrapfiles/staticresources/closures/full.jpg></div><h4>Get the Perfect Size</h4><div><p>Here at Survival Straps&trade; we custom build each piece of gear based on your exact wrist measurement. We want the size of your wrist, not the length you would like the bracelet.We ask that you follow these 3 steps closely:<ol><li>Take a tape measure, string, or scotch tape and wrap it around your wrist to where the two ends touch and there isn't any slack. Keep in mind this doesn't need to be so tight that it cuts off your circulation, but merely a true wrist size without slack.</li><li>Mark this exact length on your string and use a ruler to determine your true wrist size. Order this exact wrist size when checking out, and you are good to go!</li></ol></p><h6>Side Notes</h6><p>If you are in-between sizes, round down to the nearest size. Please remember not to compensate for slack as we do that here in-house based on your true size. Lastly, if you have any questions for our team please shoot us an email at <a href=mailto:customerservice@survivalstraps.com>customerservice@survivalstraps.com</a> or give us a ring at 1-800-971-3360 and we will gladly walk through the steps with you.</p><img width=529 height=487 src=https://s3.amazonaws.com/sstrapfiles/staticresources/sizing_chart.jpg></div></div>"
     }, {
       "title": "Light Duty Survival Bracelet™",
       "price": "29.99",
       "tags": "paracord, lightduty",
       "img": "lightduty",
-      "description": "<h4>Product Information</h4><div><ul><li>The Light Duty Survival Bracelet&trade; is the size preferred by most women. It only uses the outer sheath of the paracord making it much lighter and thinner than the regular version.</li><li>Contains up to 12' of super strong, AUTHENTIC, 550 test military spec paracord. This is not the same paracord you see sold in most stores. This is the same cordage used to rig military parachutes. It is the real deal.</li><li>In an emergency, unravel the bracelet to deploy the paracord for your use. Make a tourniquet. Tie down a piece of equipment. Use it in however you need it.</li><li>If you use it in an emergency, we'll replace it for free in exchange for your story and the rights to publish it. All you pay is shipping.</li><li>The stainless closure is a load bearing marine grade stainless steel shackle that adjusts on your wrist and is guaranteed to never rust or break.</li><li>The nylon 6-6 closure contains no metal and is made of nylon. It is super tough, black and stealth. It also adjusts on your wrist.</li><li>Logo - If one of our logo products is chosen, the logos themselves are as tough as the rest of the bracelet. They will not scratch, rust, fade or show fingerprints.</li><li>Logo tag - The dog tag will match the closure chosen. If a stainless closure is chosen, the logo dog tag will be stainless. If a nylon 6-6 closure is chosen, the dog tag will be black nylon 6-6.</li><li>A break-away safety feature is included with every bracelet. If your bracelet gets hung up on something, it will break away from your wrist.</li><li>All our products are completely waterproof. They will not fade, mildew or rot.</li><li>Hand wash with warm water and soap or detergent.</li><li>Made in America!</li></ul></div><div class=gt-accordion><h4>Closure Types</h4><div><img src=https://s3.amazonaws.com/sstrapfiles/staticresources/closures.jpg></div><h4>Get the Perfect Size</h4><div><p>Here at Survival Straps&trade; we custom build each piece of gear based on your exact wrist measurement. We want the size of your wrist, not the length you would like the bracelet.We ask that you follow these 3 steps closely:<ol><li>Take a tape measure, string, or scotch tape and wrap it around your wrist to where the two ends touch and there isn't any slack. Keep in mind this doesn't need to be so tight that it cuts off your circulation, but merely a true wrist size without slack.</li><li>Mark this exact length on your string and use a ruler to determine your true wrist size. Order this exact wrist size when checking out, and you are good to go!</li></ol></p><h6>Side Notes</h6><p>If you are in-between sizes, round down to the nearest size. Please remember not to compensate for slack as we do that here in-house based on your true size. Lastly, if you have any questions for our team please shoot us an email at <a href=mailto:customerservice@survivalstraps.com>customerservice@survivalstraps.com</a> or give us a ring at 1-800-971-3360 and we will gladly walk through the steps with you.</p><img width=529 height=487 src=https://s3.amazonaws.com/sstrapfiles/staticresources/sizing_chart.jpg></div></div>"
+      "description": "<h4>Product Information</h4><div><ul><li>The " + title + " Light Duty Survival Bracelet&trade; " + tagline + ". It is the size preferred by most women. It only uses the outer sheath of the paracord making it much lighter and thinner than the regular version.</li><li>Contains up to 12' of super strong, AUTHENTIC, 550 test military spec paracord. This is not the same paracord you see sold in most stores. This is the same cordage used to rig military parachutes. It is the real deal.</li><li>In an emergency, unravel the bracelet to deploy the paracord for your use. Make a tourniquet. Tie down a piece of equipment. Use it in however you need it.</li><li>If you use it in an emergency, we'll replace it for free in exchange for your story and the rights to publish it. All you pay is shipping.</li><li>The stainless closure is a load bearing marine grade stainless steel shackle that adjusts on your wrist and is guaranteed to never rust or break.</li><li>The nylon 6-6 closure contains no metal and is made of nylon. It is super tough, black and stealth. It also adjusts on your wrist.</li><li>Logo - If one of our logo products is chosen, the logos themselves are as tough as the rest of the bracelet. They will not scratch, rust, fade or show fingerprints.</li><li>Logo tag - The dog tag will match the closure chosen. If a stainless closure is chosen, the logo dog tag will be stainless. If a nylon 6-6 closure is chosen, the dog tag will be black nylon 6-6.</li><li>A break-away safety feature is included with every bracelet. If your bracelet gets hung up on something, it will break away from your wrist.</li><li>All our products are completely waterproof. They will not fade, mildew or rot.</li><li>Hand wash with warm water and soap or detergent.</li><li>Made in America!</li></ul></div><div class=gt-accordion><h4>Closure Types</h4><div><img src=https://s3.amazonaws.com/sstrapfiles/staticresources/closures.jpg></div><h4>Get the Perfect Size</h4><div><p>Here at Survival Straps&trade; we custom build each piece of gear based on your exact wrist measurement. We want the size of your wrist, not the length you would like the bracelet.We ask that you follow these 3 steps closely:<ol><li>Take a tape measure, string, or scotch tape and wrap it around your wrist to where the two ends touch and there isn't any slack. Keep in mind this doesn't need to be so tight that it cuts off your circulation, but merely a true wrist size without slack.</li><li>Mark this exact length on your string and use a ruler to determine your true wrist size. Order this exact wrist size when checking out, and you are good to go!</li></ol></p><h6>Side Notes</h6><p>If you are in-between sizes, round down to the nearest size. Please remember not to compensate for slack as we do that here in-house based on your true size. Lastly, if you have any questions for our team please shoot us an email at <a href=mailto:customerservice@survivalstraps.com>customerservice@survivalstraps.com</a> or give us a ring at 1-800-971-3360 and we will gladly walk through the steps with you.</p><img width=529 height=487 src=https://s3.amazonaws.com/sstrapfiles/staticresources/sizing_chart.jpg></div></div>"
     }, {
       "title": "Wide Survival Bracelet™",
       "price": "32.99",
@@ -38,7 +37,7 @@ var Collection = function(title, collection, vendor, sku, aws) {
       "price": "19.95",
       "tags": "paracord, fob",
       "img": "fob",
-      "description": "<h4>Product Information</h4><div><ul><li>Contains up to 6' of super strong, AUTHENTIC, 550 test military spec paracord. This is not the same paracord you see sold in most stores. This is the same cordage used to rig military parachutes. It is the real deal.</li><li>In an emergency, unravel to deploy the paracord for your use. Make a tourniquet. Tie down a piece of equipment. Use it in however you need it.</li><li>If you use it in an emergency, we'll replace it for free in exchange for your story and the rights to publish it. All you pay is shipping.</li><li>Built with a small ring embedded in one end. A 1” key ring is included and attached to this. Allows the key fob to sit flat while in a pocket.</li><li>The logo is affixed to a stainless military dog tag. It will not rust, fade or scratch. It is made to last.</li><li>Made in America.</li></ul></div>"
+      "description": "<h4>Product Information</h4><div><ul><li>The " + title + " Key Fob " + tagline + ".</li><li>Contains up to 6' of super strong, AUTHENTIC, 550 test military spec paracord. This is not the same paracord you see sold in most stores. This is the same cordage used to rig military parachutes. It is the real deal.</li><li>In an emergency, unravel to deploy the paracord for your use. Make a tourniquet. Tie down a piece of equipment. Use it in however you need it.</li><li>If you use it in an emergency, we'll replace it for free in exchange for your story and the rights to publish it. All you pay is shipping.</li><li>Built with a small ring embedded in one end. A 1” key ring is included and attached to this. Allows the key fob to sit flat while in a pocket.</li><li>The logo is affixed to a stainless military dog tag. It will not rust, fade or scratch. It is made to last.</li><li>Made in America.</li></ul></div>"
     }, {
       "title": "Gear Tag",
       "price": "12.95",
@@ -50,7 +49,7 @@ var Collection = function(title, collection, vendor, sku, aws) {
       "price": "21.95",
       "tags": "paracord, neckid",
       "img": "neckid",
-      "description": "<h4>Product Information</h4><div><ul><li>Contains up to 7' of super strong, AUTHENTIC, 550 test military spec paracord. This is not the same paracord you see sold in most stores. This is the same cordage used to rig military parachutes. It is the real deal. </li><li>In an emergency, unravel to deploy the paracord for your use. Make a tourniquet. Tie down a piece of equipment. Use it in however you need it. </li><li>If you use it in an emergency, we'll replace it for free in exchange for your story and the rights to publish it. All you pay is shipping. </li><li>Fully adjustable. Wear your ID or badge as high or low as you would like.  </li><li>Built with a small swivel clip to attach your keys, ID, or badge. </li><li>The logo is affixed to a stainless military dog tag. It will not rust, fade or scratch. It is made to last.  </li><li>Made in America.</li></ul></div>"
+      "description": "<h4>Product Information</h4><div><ul><li>The " + title + " Neck ID Lanyard " + tagline + ".</li><li>Contains up to 7' of super strong, AUTHENTIC, 550 test military spec paracord. This is not the same paracord you see sold in most stores. This is the same cordage used to rig military parachutes. It is the real deal. </li><li>In an emergency, unravel to deploy the paracord for your use. Make a tourniquet. Tie down a piece of equipment. Use it in however you need it. </li><li>If you use it in an emergency, we'll replace it for free in exchange for your story and the rights to publish it. All you pay is shipping. </li><li>Fully adjustable. Wear your ID or badge as high or low as you would like.  </li><li>Built with a small swivel clip to attach your keys, ID, or badge. </li><li>The logo is affixed to a stainless military dog tag. It will not rust, fade or scratch. It is made to last.  </li><li>Made in America.</li></ul></div>"
     }, {
       "title": "Necklace",
       "price": "29.95",
@@ -88,34 +87,27 @@ var Collection = function(title, collection, vendor, sku, aws) {
 var Products = function() {
   var collections = [
   {
-    "name": "Team RWB Black",
-    "vendor": "Team RWB",
-    "sku": 201600000000350,
-    "s3": "https://s3.amazonaws.com/dev-ukyrgf/shopify/team-rwb/rwb-black/"
+    "name": "Refuse to Lose Flag",
+    "collection": "Refuse to Lose",
+    "vendor": "Refuse to Lose",
+    "tagline": "defines the American Patriot mentality of strength and resilience.  We support our military and first responders.  We will not give in to terrorism.  We will protect our country and families with all we have.  We will never give up",
+    "sku": 201600000000600,
+    "s3": "https://s3.amazonaws.com/dev-ukyrgf/shopify/refuse-2-lose-flag/"
   },
   {
-    "name": "Team RWB Lt. OD Green",
-    "vendor": "Team RWB",
-    "sku": 201600000000360,
-    "s3": "https://s3.amazonaws.com/dev-ukyrgf/shopify/team-rwb/rwb-lt-od-green/"
-  },
-  {
-    "name": "Team RWB White Tag",
-    "vendor": "Team RWB",
-    "sku": 201600000000370,
-    "s3": "https://s3.amazonaws.com/dev-ukyrgf/shopify/team-rwb/rwb-white-tag/"
-  },
-  {
-    "name": "Team RWB Red Tag",
-    "vendor": "Team RWB",
-    "sku": 201600000000380,
-    "s3": "https://s3.amazonaws.com/dev-ukyrgf/shopify/team-rwb/rwb-red-tag/"
+    "name": "Refuse to Lose Eagle",
+    "collection": "Refuse to Lose",
+    "vendor": "Refuse to Lose",
+    "tagline": "defines the American Patriot mentality of strength and resilience.  We support our military and first responders.  We will not give in to terrorism.  We will protect our country and families with all we have.  We will never give up",
+    "sku": 201600000000610,
+    "s3": "https://s3.amazonaws.com/dev-ukyrgf/shopify/refuse-2-lose-eagle/"
   }];
 
+// "is a great way to show your warrior status / is a show you're bad ass warrior bracelet" + "demonstrates your capacity for battle"
   var csv = [];
 
   for (c = 0; c < collections.length; c++) {
-    csv.push(Collection(collections[c].name, collections[c].vendor, collections[c].vendor, collections[c].sku, collections[c].s3));
+    csv.push(Collection(collections[c].name, collections[c].collection, collections[c].vendor, collections[c].sku, collections[c].s3, collections[c].tagline));
   }
 
   return csv;
@@ -155,6 +147,10 @@ for (v = 0; v < products.length; v++) {
     var imageRow = document.getElementById('imageRow');
     var imageRowContent = imageRow.innerHTML;
     imageRow.innerHTML = imageRowContent + "<img src=" + products[v][a].img + ">";
+
+    var skuTable = document.getElementById('skuTable');
+    var skuTableRow = skuTable.innerHTML;
+    skuTable.innerHTML = skuTableRow + "<tr><td>" + products[v][a].productName + "</td><td>'" + products[v][a].sku + "</td></tr>";
   }
 }
 
