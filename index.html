@@ -9,59 +9,61 @@
 <body>
 <div class="container">
 
-<div class="row">
-	<h1>Shopify Product Launcher v0.1.0</h1>
-	<h3>Advanced tool to help create collections of products</h3>
-	<p>Using a text editor, first ensure that you've set up your products.json file.
-	Then, follow the steps below to create a CSV that you can import into Shopify.</p>
-</div>
-
-<form action="" class="form-horizontal">
   <div class="row">
-		<div class="form-group">
-			<label for="sku" class="col-sm-3 control-label">Starting SKU</label>
-			<div class="col-sm-9">
-        <input type="text" id="sku" class="form-control">
-      </div>
-		</div>
-    <div class="form-group">
-      <label for="productType" class="col-sm-3 control-label">Collection Name</label>
-      <div class="col-sm-9">
-        <input type="text" id="collectionName" class="form-control">
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="productType" class="col-sm-3 control-label">Vendor</label>
-      <div class="col-sm-9">
-        <input type="text" id="vendorName" class="form-control">
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="productType" class="col-sm-3 control-label">Amazon S3 Image Directory</label>
-      <div class="col-sm-9">
-        <input type="text" id="awsDirectory" class="form-control">
-        <p class="help-block">Include trailing slash</p>
-      </div>
-    </div>
+    <h1>Shopify Product Launcher v0.1.0</h1>
+    <h3>Advanced tool to help create collections of products</h3>
+    <p>Using a text editor, first ensure that you've set up your products.json file.
+    Then, follow the steps below to create a CSV that you can import into Shopify.</p>
   </div>
-</form>
 
-<div class="row">
-	<hr>
-</div>
-<div class="row">
-	<label for="output">CSV</label>
-	<textarea name="output" id="output" class="form-control" rows="15">Handle,Title,Body (HTML),Vendor,Type,Tags,Published,Option1 Name,Option1 Value,Option2 Name,Option2 Value,Option3 Name,Option3 Value,Variant SKU,Variant Grams,Variant Inventory Tracker,Variant Inventory Qty,Variant Inventory Policy,Variant Fulfillment Service,Variant Price,Variant Compare At Price,Variant Requires Shipping,Variant Taxable,Variant Barcode,Image Src,Image Alt Text,Gift Card,Google Shopping / MPN,Google Shopping / Age Group,Google Shopping / Gender,Google Shopping / Google Product Category,SEO Title,SEO Description,Google Shopping / AdWords Grouping,Google Shopping / AdWords Labels,Google Shopping / Condition,Google Shopping / Custom Product,Google Shopping / Custom Label 0,Google Shopping / Custom Label 1,Google Shopping / Custom Label 2,Google Shopping / Custom Label 3,Google Shopping / Custom Label 4,Variant Image,Variant Weight Unit,Variant Tax Code
-</textarea>
-</div>
-<!--<div class="row">
-  <ul id="imageList">
+  <form action="" class="form-horizontal">
+    <div class="row">
+      <div class="form-group">
+        <label for="sku" class="col-sm-3 control-label">Starting SKU</label>
+        <div class="col-sm-9">
+          <input type="text" id="sku" class="form-control">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="productType" class="col-sm-3 control-label">Collection Name</label>
+        <div class="col-sm-9">
+          <input type="text" id="collectionName" class="form-control">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="productType" class="col-sm-3 control-label">Vendor</label>
+        <div class="col-sm-9">
+          <input type="text" id="vendorName" class="form-control">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="productType" class="col-sm-3 control-label">Amazon S3 Image Directory</label>
+        <div class="col-sm-9">
+          <input type="text" id="awsDirectory" class="form-control">
+          <p class="help-block">Include trailing slash</p>
+        </div>
+      </div>
+    </div>
+  </form>
 
-  </ul>
-</div>-->
-<div class="row" id="imageRow">
+  <div class="row">
+    <hr>
+  </div>
+  <div class="row">
+    <label for="output">CSV</label>
+    <textarea name="output" id="output" class="form-control" rows="15">Handle,Title,Body (HTML),Vendor,Type,Tags,Published,Option1 Name,Option1 Value,Option2 Name,Option2 Value,Option3 Name,Option3 Value,Variant SKU,Variant Grams,Variant Inventory Tracker,Variant Inventory Qty,Variant Inventory Policy,Variant Fulfillment Service,Variant Price,Variant Compare At Price,Variant Requires Shipping,Variant Taxable,Variant Barcode,Image Src,Image Alt Text,Gift Card,Google Shopping / MPN,Google Shopping / Age Group,Google Shopping / Gender,Google Shopping / Google Product Category,SEO Title,SEO Description,Google Shopping / AdWords Grouping,Google Shopping / AdWords Labels,Google Shopping / Condition,Google Shopping / Custom Product,Google Shopping / Custom Label 0,Google Shopping / Custom Label 1,Google Shopping / Custom Label 2,Google Shopping / Custom Label 3,Google Shopping / Custom Label 4,Variant Image,Variant Weight Unit,Variant Tax Code
+  </textarea>
+  </div>
+  <div class="row" id="imageRow">
 
-</div>
+  </div>
+
+  <div class="row">
+    <table id="skuTable">
+      
+    </table>
+
+  </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="app.js"></script>
